@@ -55,6 +55,8 @@ int main(int argc, char **argv)
 
         pthread_create(&thread, NULL, clnt_connection, &csock);
         //pthread_join(thread, NULL);
+        pthread_detach(thread);
+        usleep(10);
     }
 
     return 0;
