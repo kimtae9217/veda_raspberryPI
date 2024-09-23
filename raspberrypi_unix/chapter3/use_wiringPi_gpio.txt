@@ -1,0 +1,17 @@
+# fetch the source
+sudo apt install git
+git clone https://github.com/WiringPi/WiringPi.git
+cd WiringPi
+
+# build the package
+./build debian
+mv debian-template/wiringpi_3.10_arm64.deb .
+
+# install it
+sudo dpkg -i ./wiringpi_3.10_arm64.deb
+
+
+# LED
+gpio -g write 18 out
+gpio -g write 18 1
+gpio -g write 18 0
