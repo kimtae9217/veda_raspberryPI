@@ -1,3 +1,5 @@
+# wiringPi 홈페이지가 사라져서 github에서 다운 받아야함.
+
 # fetch the source
 sudo apt install git
 git clone https://github.com/WiringPi/WiringPi.git
@@ -11,7 +13,7 @@ mv debian-template/wiringpi_3.10_arm64.deb .
 sudo dpkg -i ./wiringpi_3.10_arm64.deb
 
 
-# LED
+# LED를 gpio 명령어로 켜고 끄기
 gpio -g write 18 out
 gpio -g write 18 1
 gpio -g write 18 0
