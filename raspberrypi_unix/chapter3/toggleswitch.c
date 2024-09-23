@@ -20,7 +20,7 @@ int switchControl()
             digitalWrite(LED, ledstate);
             delay(200);
         }
-        buttonState = ledstate;
+        lastButtonState = buttonState;
         delay(10);
     }
     return 0;
